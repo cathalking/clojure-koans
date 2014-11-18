@@ -9,4 +9,5 @@ target
 .lein-plugins
 .lein-repl-history
 *.swp
+.nrepl-port
 
