@@ -45,5 +45,5 @@
 
   "All together now!"
   (= "Test Testerson, 123 Test Lane, Testerville, TX"
-    ((fn [fname lname :keys [street-address city state]]
-      (str fname " " lname ", " street-address ", " city ", " state)) ["Test" "Testerson"] test-address)))
+    ((fn [address full-name](let [{:keys [street-address city state]} address [first-name last-name] full-name ]
+      (str first-name " " last-name ", " street-address ", " city ", " state))) test-address ["Test", "Testerson"])))
